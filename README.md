@@ -1,16 +1,99 @@
-# React + Vite
+# Firebase Todo App (React + Redux Toolkit)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
+This is a simple Todo application built using:
+- React (Vite)
+- Redux Toolkit
+- Firebase Realtime Database
+- Axios
 
-Currently, two official plugins are available:
+The app allows users to:
+- Add todos
+- Store data in Firebase
+- Fetch and display todos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📁 Folder Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+│
+├── api/
+│   └── apiInstance.js       # Axios configuration
+│
+├── app/
+│   └── store.js             # Redux store setup
+│
+├── assets/                  # Images and static files
+│
+├── features/
+│   └── todo/
+│       └── todoSlice.js     # Redux slice for todos
+│
+├── App.jsx                  # Main component
+├── main.jsx                 # Entry point
+```
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Getting Started
+
+### 1️⃣ Install Dependencies
+```bash
+npm install
+```
+
+### 2️⃣ Run the App
+```bash
+npm run dev
+```
+
+---
+
+## 🔥 Firebase Setup
+
+1. Go to Firebase Console
+2. Create a new project
+3. Enable Realtime Database
+4. Copy your database URL
+
+Update in:
+```
+src/api/apiInstance.js
+```
+
+Example:
+```js
+const apiInstance = axios.create({
+  baseURL: 'https://your-project-id.firebaseio.com'
+});
+```
+
+---
+
+## ⚙️ Features
+
+- ✅ Add Todo
+- ✅ Store in Firebase
+- ✅ Async API using Redux Toolkit
+- ✅ Clean folder structure
+
+---
+
+## 📦 Technologies Used
+
+- React
+- Redux Toolkit
+- Axios
+- Firebase
+- Vite
+
+---
+
+## 🧑‍💻 Author
+
+Bilimoria Drashti
+
+---
+
